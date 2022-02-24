@@ -1,0 +1,24 @@
+
+                Wed Feb 16 11:26:43 2022
+[2022/02/16@11:26:43.471-0300] P-23624      T-26788 I DBUTIL   : (451)   Sessão prostrct create iniciada por ce3475 em CON:. 
+[2022/02/16@11:26:43.475-0300] P-23624      T-26788 I DBUTIL   : (12862) Arquivo de estrutura  C:\provaProgress\Banco\escola.st usado para criar banco de dados com tamanho de bloco  4096. 
+[2022/02/16@11:26:43.492-0300] P-23624      T-26788 I DBUTIL   : (334)   Fim de sessão prostrct create. 
+[2022/02/16@11:26:43.509-0300] P-23624      T-26788 I DBUTIL   : (451)   Sessão procopy iniciada por ce3475 em CON:. 
+[2022/02/16@11:26:43.649-0300] P-23624      T-26788 I DBUTIL   : (334)   Fim de sessão procopy. 
+
+                Wed Feb 16 11:26:43 2022
+[2022/02/16@11:26:43.678-0300] P-23624      T-26788 I DBUTIL   : (451)   Sessão procopy get default SQL DBA iniciada por ce3475 em CON:. 
+[2022/02/16@11:26:43.679-0300] P-23624      T-26788 I DBUTIL   : (15321) Inicialização do log Before Image no bloco 0  offset 0. 
+[2022/02/16@11:26:43.698-0300] P-23624      T-26788 I DBUTIL   : (14867) Procopy -newinstance criou uma nova GUID de banco de dados. 
+[2022/02/16@11:26:43.701-0300] P-23624      T-26788 I DBUTIL   : (15109) No fechamento do banco de dados o número de transações ao vivo é 0. 
+[2022/02/16@11:26:43.701-0300] P-23624      T-26788 I DBUTIL   : (15743) Conclusão do log Before Image no bloco 0 Offset 2637. 
+[2022/02/16@11:26:43.727-0300] P-23624      T-26788 I DBUTIL   : (334)   Fim de sessão procopy get default SQL DBA. 
+
+                Wed Feb 16 11:26:45 2022
+[2022/02/16@11:26:45.319-0300] P-15804      T-22404 I ABL      : (451)   Sessão Single-user iniciada por ce3475 em CON:. 
+[2022/02/16@11:26:45.321-0300] P-15804      T-22404 I ABL      : (5194)  Erro no Event Logger: Nao foi possivel encontrar 'PROMSGS.DLL'. 
+[2022/02/16@11:26:45.322-0300] P-15804      T-22404 I ABL      : (15321) Inicialização do log Before Image no bloco 0  offset 2637. 
+[2022/02/16@11:26:45.362-0300] P-15804      T-22404 I ABL      : (7129)  Usr 0 define nome para ce3475. 
+[2022/02/16@11:43:52.851-0300] P-15804      T-22404 I ABL      : (15109) No fechamento do banco de dados o número de transações ao vivo é 0. 
+[2022/02/16@11:43:52.851-0300] P-15804      T-22404 I ABL      : (15743) Conclusão do log Before Image no bloco 12 Offset 8076. 
+[2022/02/16@11:43:52.903-0300] P-15804      T-22404 I ABL      : (334)   Fim de sessão Single-user. 

@@ -1,0 +1,174 @@
+ADD SEQUENCE "Tur_codigo"
+  INITIAL 0
+  INCREMENT 1
+  CYCLE-ON-LIMIT no
+
+ADD TABLE "CursoCurriculo"
+  AREA "Schema Area"
+  DUMP-NAME "cursocurriculo"
+
+ADD FIELD "Cur_codigo" OF "CursoCurriculo" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Curso"
+  POSITION 2
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Curso"
+  HELP "Insira o código do curso:"
+  ORDER 10
+
+ADD FIELD "Cur_descricao" OF "CursoCurriculo" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Desc Curso"
+  POSITION 3
+  MAX-WIDTH 100
+  COLUMN-LABEL "Desc Curso"
+  HELP "Insira a descrição do curso:"
+  ORDER 20
+
+ADD TABLE "Sala"
+  AREA "Schema Area"
+  LABEL "Sala"
+  DUMP-NAME "sala"
+
+ADD FIELD "Sal_codigo" OF "Sala" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Sala"
+  POSITION 2
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Sala"
+  HELP "Insira o código da sala:"
+  ORDER 10
+
+ADD FIELD "Sal_desc" OF "Sala" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  POSITION 3
+  MAX-WIDTH 40
+  ORDER 20
+
+ADD TABLE "SitTurma"
+  AREA "Schema Area"
+  LABEL "SituacaoTurma"
+  DUMP-NAME "sitturma"
+
+ADD FIELD "Tst_codigo" OF "SitTurma" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Sit Turma"
+  POSITION 2
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Sit Turma"
+  HELP "Insira o código da situação da turma:"
+  ORDER 10
+
+ADD FIELD "Tst_descricao" OF "SitTurma" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Desc Situacao"
+  POSITION 3
+  MAX-WIDTH 60
+  COLUMN-LABEL "Desc Situacao"
+  HELP "Insira a descrição do tipo de situação da turma:"
+  ORDER 20
+
+ADD TABLE "Turma"
+  AREA "Schema Area"
+  LABEL "Turma"
+  DUMP-NAME "turma"
+
+ADD FIELD "Tur_codigo" OF "Turma" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Turma"
+  POSITION 2
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Turma"
+  HELP "Insira o código da turma:"
+  ORDER 10
+
+ADD FIELD "Tur_descricao" OF "Turma" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Desc Turma"
+  POSITION 3
+  MAX-WIDTH 100
+  COLUMN-LABEL "Desc Turma"
+  HELP "Insira a descrição da turma:"
+  ORDER 20
+
+ADD FIELD "Tur_inicio" OF "Turma" AS date 
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Inicio Turma"
+  POSITION 4
+  MAX-WIDTH 4
+  COLUMN-LABEL "Inicio Turma"
+  HELP "Insira a data de início da turma:"
+  ORDER 30
+
+ADD FIELD "Tur_fin" OF "Turma" AS date 
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Fim Turma"
+  POSITION 5
+  MAX-WIDTH 4
+  COLUMN-LABEL "Fim Turma"
+  HELP "Insira a data final da turma:"
+  ORDER 40
+
+ADD FIELD "Cur_codigo" OF "Turma" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Curso"
+  POSITION 6
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Curso"
+  HELP "Insira o código do curso:"
+  ORDER 50
+
+ADD FIELD "Tst_codigo" OF "Turma" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Sit Turma"
+  POSITION 7
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Sit Turma"
+  HELP "Insira o código da situação da turma:"
+  ORDER 60
+
+ADD FIELD "Sal_codigo" OF "Turma" AS integer 
+  FORMAT "zzz,zz9"
+  INITIAL "0"
+  LABEL "Cod Sala"
+  POSITION 8
+  MAX-WIDTH 4
+  COLUMN-LABEL "Cod Sala"
+  HELP "Insira o código da sala:"
+  ORDER 70
+
+ADD INDEX "Primary" ON "Turma" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Tur_codigo" ASCENDING 
+
+ADD INDEX "CodCurso" ON "Turma" 
+  AREA "Schema Area"
+  INDEX-FIELD "Cur_codigo" ASCENDING 
+
+ADD INDEX "CodSala" ON "Turma" 
+  AREA "Schema Area"
+  INDEX-FIELD "Sal_codigo" ASCENDING 
+
+ADD INDEX "CodSituacao" ON "Turma" 
+  AREA "Schema Area"
+  INDEX-FIELD "Tst_codigo" ASCENDING 
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000003589
